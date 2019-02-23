@@ -57,20 +57,6 @@
 							</a>
 						</li>
 					
-						<li>
-							<a href="/#documentationauthentication">
-								Authentication
-								
-							</a>
-						</li>
-					
-						<li>
-							<a href="/#documentationerrors">
-								Errors
-								
-							</a>
-						</li>
-					
 				</ul>
 			</section>
 		
@@ -82,37 +68,30 @@
 					
 					
 						<li>
-							<a href="/#apibooks_list">
-								/books
+							<a href="/#apiadvocates_list">
+								/advocates
 								<span class="endpoint get"></span>
 							</a>
 						</li>
 					
 						<li>
-							<a href="/#apibooks_add">
-								/books
-								<span class="endpoint post"></span>
-							</a>
-						</li>
-					
-						<li>
-							<a href="/#apibooks_get">
-								/books/:id
+							<a href="/#apiadvocates_get">
+								/advocates/:id
 								<span class="endpoint get"></span>
 							</a>
 						</li>
 					
 						<li>
-							<a href="/#apibooks_update">
-								/books/:id
-								<span class="endpoint put"></span>
+							<a href="/#apijobs_get">
+								/advocates/:id/:jobs
+								<span class="endpoint get"></span>
 							</a>
 						</li>
 					
 						<li>
-							<a href="/#apibooks_delete">
-								/books/:id
-								<span class="endpoint delete"></span>
+							<a href="/#apiprojects_get">
+								/advocates/:id/projects/community
+								<span class="endpoint get"></span>
 							</a>
 						</li>
 					
@@ -122,12 +101,7 @@
 	
 </div>
 
-
-			<p class="copyright">
-				<a href="https://cloudcannon.com/">
-					Template by CloudCannon
-				</a>
-			</p>
+			
 		</header>
 		<div class="main">
 			<div class="search-page">
@@ -145,47 +119,13 @@
 					
 						
 						
-						"api-books-add": {
-							"id": "api-books-add",
-							"title": "/books",
+						"api-advocates-get": {
+							"id": "api-advocates-get",
+							"title": "/advocates/:id",
 							"category": "api",
-							"description": "Create Book",
-		  				"type": "post",
-							"url": "/#apibooks_add",
-							"content": ""
-						}
-						
-					
-				
-			
-				
-					
-						,
-						
-						"api-books-delete": {
-							"id": "api-books-delete",
-							"title": "/books/:id",
-							"category": "api",
-							"description": "Deletes a book",
-		  				"type": "delete",
-							"url": "/#apibooks_delete",
-							"content": ""
-						}
-						
-					
-				
-			
-				
-					
-						,
-						
-						"api-books-get": {
-							"id": "api-books-get",
-							"title": "/books/:id",
-							"category": "api",
-							"description": "Get Book",
+							"description": "Get Advocate",
 		  				"type": "get",
-							"url": "/#apibooks_get",
+							"url": "/#apiadvocates_get",
 							"content": ""
 						}
 						
@@ -196,13 +136,13 @@
 					
 						,
 						
-						"api-books-list": {
-							"id": "api-books-list",
-							"title": "/books",
+						"api-advocates-list": {
+							"id": "api-advocates-list",
+							"title": "/advocates",
 							"category": "api",
-							"description": "List all books",
+							"description": "List all advocates",
 		  				"type": "get",
-							"url": "/#apibooks_list",
+							"url": "/#apiadvocates_list",
 							"content": ""
 						}
 						
@@ -213,13 +153,30 @@
 					
 						,
 						
-						"api-books-update": {
-							"id": "api-books-update",
-							"title": "/books/:id",
+						"api-jobs-get": {
+							"id": "api-jobs-get",
+							"title": "/advocates/:id/:jobs",
 							"category": "api",
-							"description": "Update Book",
-		  				"type": "put",
-							"url": "/#apibooks_update",
+							"description": "Get Advocate's Work experience",
+		  				"type": "get",
+							"url": "/#apijobs_get",
+							"content": ""
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-projects-get": {
+							"id": "api-projects-get",
+							"title": "/advocates/:id/projects/community",
+							"category": "api",
+							"description": "Get Advocate's Community Projects",
+		  				"type": "get",
+							"url": "/#apiprojects_get",
 							"content": ""
 						}
 						
@@ -227,40 +184,6 @@
 				
 			
 		
-			
-				
-					
-						,
-						
-						"documentation-authentication": {
-							"id": "documentation-authentication",
-							"title": "Authentication",
-							"category": "documentation",
-							"description": "",
-		  				"type": "",
-							"url": "/#documentationauthentication",
-							"content": ""
-						}
-						
-					
-				
-			
-				
-					
-						,
-						
-						"documentation-errors": {
-							"id": "documentation-errors",
-							"title": "Errors",
-							"category": "documentation",
-							"description": "",
-		  				"type": "",
-							"url": "/#documentationerrors",
-							"content": ""
-						}
-						
-					
-				
 			
 				
 					
