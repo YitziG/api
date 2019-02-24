@@ -89,6 +89,13 @@
 						</li>
 					
 						<li>
+							<a href="#apiprojects_sifra_get">
+								/advocates/:id/projects/community
+								<span class="endpoint get"></span>
+							</a>
+						</li>
+					
+						<li>
 							<a href="#apiprojects_get">
 								/advocates/:id/projects/community
 								<span class="endpoint get"></span>
@@ -452,6 +459,110 @@
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
+					<a id="apiprojects_sifra_get">
+						/advocates/:id/projects/community
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/projects_sifra_get.md">Edit</a>
+				</h3>
+				
+					<p class="description">Get Advocate's Community Projects</p>
+				
+
+				
+
+				<p>Returns the community building experience of a specific advocate</p>
+
+
+				
+						
+								
+
+
+<div title="jQuery" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/advocates/yitzi/projects/community"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">token</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span><span class="p">,</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Python" class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://api.devrel.com/advocates/yitzi/projects/community"</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s">"YOUR_APP_KEY"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Node.js" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"request"</span><span class="p">);</span>
+<span class="nx">request</span><span class="p">(</span><span class="s2">"http://api.devrel.com/advocates/yitzi/projects/community?token=YOUR_APP_KEY"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Curl" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://sampleapi.devrel.com/advocates/yitzi/projects/community?key<span class="o">=</span>YOUR_APP_KEY
+</code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Community Project Nights"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organize and facilitate twice monthly meetups where developers and community managers work to build community and software in Bet Shemesh"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/groups/374361659790040"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google Developer Challenge Meetup"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organized meetups for the Google Developer Challenge participants at Google Campus TLV"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured in the Udacity international newsletter. We were the first in person meetup for the course and inspired similar meetups worldwide!"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isreasy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I created this app to provide an easy to use, one stop shop resource for anglo job hunters in Israel."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bit.ly/DREAMJOBISRAEL"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advocate has no interpersonal skills, RUN AWAY!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
 					<a id="apiprojects_get">
 						/advocates/:id/projects/community
 						
@@ -518,13 +629,23 @@
 
 <div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Community Project Nights"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Community Project Nights"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organize and facilitate two monthly meetups where developers and community managers work to build community and software in Bet Shemesh"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organize and facilitate twice monthly meetups where developers and community managers work to build community and software in Bet Shemesh"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/groups/374361659790040"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google Developer Challenge Meetup"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organized meetups for the Google Developer Challenge participants at Google Campus TLV"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured in the Udacity international newsletter. We were the first in person meetup for the course and inspired similar meetups worldwide!"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isreasy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I created this app to provide an easy to use, one stop shop resource for anglo job hunters in Israel."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bit.ly/DREAMJOBISRAEL"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
