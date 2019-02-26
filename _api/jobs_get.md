@@ -56,7 +56,9 @@ right_code_blocks:
         { "id": "maoftech",
           "position": "Advisory board member and Start-up mentor",
           "company": "MaofTech accelerator",
-          "website": "betshemesh.maof-tech.com"
+          "website": "betshemesh.maof-tech.com",
+          "dateStarted": "Dec 2018",
+          "currentPosition": true
         }
       ]
     title: Response
