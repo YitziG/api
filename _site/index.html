@@ -89,15 +89,15 @@
 						</li>
 					
 						<li>
-							<a href="#apiprojects_sifra_get">
+							<a href="#apiprojects_get">
 								/advocates/:id/projects/community
 								<span class="endpoint get"></span>
 							</a>
 						</li>
 					
 						<li>
-							<a href="#apiprojects_get">
-								/advocates/:id/projects/community
+							<a href="#apiprojects_sifra_get">
+								/advocates/:id/projects/software
 								<span class="endpoint get"></span>
 							</a>
 						</li>
@@ -426,7 +426,7 @@
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifra"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lead Developer and Advocate"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifradigital"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sifra Digital"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifradigital.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"dateStarted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feb 2016"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"currentPosition"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
@@ -438,6 +438,12 @@
     </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook.com/startbeitshemesh"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"dateStarted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feb 2018"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"currentPosition"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"maoftech"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advisory board member and Start-up mentor"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MaofTech accelerator"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"betshemesh.maof-tech.com"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
@@ -459,13 +465,13 @@
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
-					<a id="apiprojects_sifra_get">
+					<a id="apiprojects_get">
 						/advocates/:id/projects/community
 						
 							<span class="endpoint get"></span>
 						
 					</a>
-					<a class="editor-link" href="cloudcannon:collections/_api/projects_sifra_get.md">Edit</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/projects_get.md">Edit</a>
 				</h3>
 				
 					<p class="description">Get Advocate's Community Projects</p>
@@ -563,16 +569,16 @@
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
-					<a id="apiprojects_get">
-						/advocates/:id/projects/community
+					<a id="apiprojects_sifra_get">
+						/advocates/:id/projects/software
 						
 							<span class="endpoint get"></span>
 						
 					</a>
-					<a class="editor-link" href="cloudcannon:collections/_api/projects_get.md">Edit</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/projects_sifra_get.md">Edit</a>
 				</h3>
 				
-					<p class="description">Get Advocate's Community Projects</p>
+					<p class="description">Get Advocate's Software Projects</p>
 				
 
 				
@@ -585,7 +591,7 @@
 								
 
 
-<div title="jQuery" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/advocates/yitzi/projects/community"</span><span class="p">,</span> <span class="p">{</span>
+<div title="jQuery" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/advocates/yitzi/projects/software"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">token</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span><span class="p">,</span>
 <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
@@ -596,7 +602,7 @@
 								
 
 
-<div title="Python" class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://api.devrel.com/advocates/yitzi/projects/community"</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s">"YOUR_APP_KEY"</span><span class="p">)</span>
+<div title="Python" class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://api.devrel.com/advocates/yitzi/projects/software"</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s">"YOUR_APP_KEY"</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
 </code></pre></div></div>
 
@@ -605,7 +611,7 @@
 
 
 <div title="Node.js" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"request"</span><span class="p">);</span>
-<span class="nx">request</span><span class="p">(</span><span class="s2">"http://api.devrel.com/advocates/yitzi/projects/community?token=YOUR_APP_KEY"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">request</span><span class="p">(</span><span class="s2">"http://api.devrel.com/advocates/yitzi/projects/software?token=YOUR_APP_KEY"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
 <span class="p">}</span>
@@ -615,7 +621,7 @@
 								
 
 
-<div title="Curl" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://sampleapi.devrel.com/advocates/yitzi/projects/community?key<span class="o">=</span>YOUR_APP_KEY
+<div title="Curl" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://sampleapi.devrel.com/advocates/yitzi/projects/software?key<span class="o">=</span>YOUR_APP_KEY
 </code></pre></div></div>
 
 								
@@ -629,22 +635,29 @@
 
 <div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Community Project Nights"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organize and facilitate twice monthly meetups where developers and community managers work to build community and software in Bet Shemesh"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/groups/374361659790040"</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anylaw"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lead developer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"responsibilities"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crawlers, parsing, classification, and search"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AnyLaw was established to provide a no-cost alternative solution to the unnecessary – and exclusionary — expense of legal research"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anylaw.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"press"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured on forbes.com at forbes.com/sites/maryjuetten/2019/01/22/free-legal-research-for-all-anylaw"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"technologies"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crawler4j, Elastic, PostgreSQL"</span><span class="w">  
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google Developer Challenge Meetup"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organizer"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organized meetups for the Google Developer Challenge participants at Google Campus TLV"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured in the Udacity international newsletter. We were the first in person meetup for the course and inspired similar meetups worldwide!"</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The English Club"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android Lead"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Responsible for UI update of popular educational game"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"englishclubapp.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"play.google.com/store/apps/details?id=com.englishclubapp.englishclub"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"press"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured in the Maariv (Israel's second top selling newspaper) in honor of international children's day as one of five apps representative of Israel's Edtech innovation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"technologies"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android, Java, Gradle"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isreasy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I created this app to provide an easy to use, one stop shop resource for anglo job hunters in Israel."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bit.ly/DREAMJOBISRAEL"</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BimiLeap"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android Lead, Payments integration"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knowledge creation app! Founded by Dr. Howard Moskowitz"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"press"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Malcolm Gladwell's TED talk about the discoveries of our founder that the app is based on ted.com/talks/malcolm_gladwell_on_spaghetti_sauce"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"technologies"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freemarker, Email integration, Payments flow (Stripe API)"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>

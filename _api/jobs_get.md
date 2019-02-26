@@ -40,7 +40,7 @@ right_code_blocks:
         {
           "id": "sifra",
           "position": "Lead Developer and Advocate",
-          "company": "sifradigital",
+          "company": "Sifra Digital",
           "website": "sifradigital.com",
           "dateStarted": "Feb 2016",
           "currentPosition": true
@@ -52,6 +52,12 @@ right_code_blocks:
           "facebook": "facebook.com/startbeitshemesh",
           "dateStarted": "Feb 2018",
           "currentPosition": true
+        },
+        { "id": "maoftech",
+          "position": "Advisory board member and Start-up mentor",
+          "company": "MaofTech accelerator",
+          "website": "betshemesh.maof-tech.com"
+        }
       ]
     title: Response
     language: json

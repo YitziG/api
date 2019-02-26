@@ -1,8 +1,8 @@
 ---
-title: /advocates/:id/projects/community
-position: 1.4
+title: /advocates/:id/projects/software
+position: 1.5
 type: get
-description: Get Advocate's Community Projects
+description: Get Advocate's Software Projects
 parameters:
   - name:
     content:
@@ -10,7 +10,7 @@ content_markdown: |-
   Returns the community building experience of a specific advocate
 left_code_blocks:
   - code_block: |-
-      $.get("http://api.myapp.com/advocates/yitzi/projects/community", {
+      $.get("http://api.myapp.com/advocates/yitzi/projects/software", {
         token: "YOUR_APP_KEY",
       }, function(data) {
         alert(data);
@@ -18,42 +18,49 @@ left_code_blocks:
     title: jQuery
     language: javascript
   - code_block: |-
-      r = requests.get("http://api.devrel.com/advocates/yitzi/projects/community", token="YOUR_APP_KEY")
+      r = requests.get("http://api.devrel.com/advocates/yitzi/projects/software", token="YOUR_APP_KEY")
       print r.text
     title: Python
     language: python
   - code_block: |-
       var request = require("request");
-      request("http://api.devrel.com/advocates/yitzi/projects/community?token=YOUR_APP_KEY", function (error, response, body) {
+      request("http://api.devrel.com/advocates/yitzi/projects/software?token=YOUR_APP_KEY", function (error, response, body) {
       if (!error && response.statusCode == 200) {
         console.log(body);
       }
     title: Node.js
     language: javascript
   - code_block: |-
-      curl http://sampleapi.devrel.com/advocates/yitzi/projects/community?key=YOUR_APP_KEY
+      curl http://sampleapi.devrel.com/advocates/yitzi/projects/software?key=YOUR_APP_KEY
     title: Curl
     language: bash 
 right_code_blocks:
   - code_block: |2-
       [
         {
-          "name": "Community Project Nights",
-          "position": "Organizer",
-          "description": "Organize and facilitate twice monthly meetups where developers and community managers work to build community and software in Bet Shemesh",
-          "facebook": "https://www.facebook.com/groups/374361659790040"
+          "name": "Anylaw",
+          "role": "Lead developer",
+          "responsibilities": "crawlers, parsing, classification, and search",
+          "description": "AnyLaw was established to provide a no-cost alternative solution to the unnecessary – and exclusionary — expense of legal research",
+          "website": "anylaw.com",
+          "press": "Featured on forbes.com at forbes.com/sites/maryjuetten/2019/01/22/free-legal-research-for-all-anylaw",
+          "technologies": "crawler4j, Elastic, PostgreSQL"  
         },
         {
-          "name": "Google Developer Challenge Meetup",
-          "position": "Organizer",
-          "description": "Organized meetups for the Google Developer Challenge participants at Google Campus TLV",
-          "notes": "Featured in the Udacity international newsletter. We were the first in person meetup for the course and inspired similar meetups worldwide!"
+          "name": "The English Club",
+          "position": "Android Lead",
+          "description": "Responsible for UI update of popular educational game",
+          "website": "englishclubapp.com",
+          "app": "play.google.com/store/apps/details?id=com.englishclubapp.englishclub",
+          "press": "Featured in the Maariv (Israel's second top selling newspaper) in honor of international children's day as one of five apps representative of Israel's Edtech innovation",
+          "technologies": "Android, Java, Gradle"
         },
         {
-          "name": "Isreasy",
-          "position": "Developer",
-          "description": "I created this app to provide an easy to use, one stop shop resource for anglo job hunters in Israel.",
-          "url": "bit.ly/DREAMJOBISRAEL"
+          "name": "BimiLeap",
+          "position": "Android Lead, Payments integration",
+          "description": "Knowledge creation app! Founded by Dr. Howard Moskowitz",
+          "press": "Malcolm Gladwell's TED talk about the discoveries of our founder that the app is based on ted.com/talks/malcolm_gladwell_on_spaghetti_sauce",
+          "technologies": "Freemarker, Email integration, Payments flow (Stripe API)"
         }
       ]
     title: Response
