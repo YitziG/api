@@ -68,7 +68,7 @@ right_code_blocks:
   - code_block: |2-
       {
         "error": true,
-        "message": "Advocate has no interpersonal skills, RUN AWAY!"
+        "message": "Advocate has no dev skillz, RUN AWAY!"
       }
     title: Error
     language: json
