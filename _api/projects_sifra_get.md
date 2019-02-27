@@ -7,7 +7,7 @@ parameters:
   - name:
     content:
 content_markdown: |-
-  Returns the community building experience of a specific advocate
+  Returns the software development experience of a specific advocate
 left_code_blocks:
   - code_block: |-
       $.get("http://api.myapp.com/advocates/yitzi/projects/software", {
