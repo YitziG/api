@@ -1,6 +1,6 @@
 ---
 title: /advocates/:id/:skills
-position: 1.4
+position: 1.6
 type: get
 description: Get Advocate's Skills
 parameters:
