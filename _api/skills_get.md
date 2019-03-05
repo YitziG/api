@@ -40,7 +40,7 @@ right_code_blocks:
         {
           "skill": "learning new technologies",
           "description": "Yitzi picks up new technologies rapidly and quickly finds creative and fun ways to put them to use",
-          "examples": "As a development lead on many projects ranging from education to legal research and more Yitzi has proven himself capable of picking up new technologies on the fly and implementing them with a focus on best practice. In the heat of action Yitzi has learnt Android, Java, PostgreSQL, Elastic, and much more. Yitzi is a tireless tinkerer who wil not put down a new technology until he masters it!"
+          "examples": "As a development lead on projects ranging from education to legal research and more Yitzi has proven himself capable of picking up new technologies on the fly and implementing them with a focus on best practice. In the heat of action Yitzi has learnt Android, Java, PostgreSQL, Elastic, and much more. Yitzi is a tireless tinkerer who wil not put down a new technology until he masters it!"
         },
         {
           "skill": "Boiling Hi-tech down to its fundamental ingredients and presenting complex concepts to audiences of all levels at their level",
