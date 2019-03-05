@@ -102,6 +102,13 @@
 							</a>
 						</li>
 					
+						<li>
+							<a href="#apiskills_get">
+								/advocates/:id/:skills
+								<span class="endpoint get"></span>
+							</a>
+						</li>
+					
 				</ul>
 			</section>
 		
@@ -671,6 +678,102 @@
 <div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advocate has no dev skillz, RUN AWAY!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiskills_get">
+						/advocates/:id/:skills
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/skills_get.md">Edit</a>
+				</h3>
+				
+					<p class="description">Get Advocate's Skills</p>
+				
+
+				
+
+				<p>Returns the skills of a specific advocate</p>
+
+
+				
+						
+								
+
+
+<div title="jQuery" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/advocates/yitzi/skills"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">token</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span><span class="p">,</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Python" class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://api.devrel.com/advocates/yitzi/skills"</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s">"YOUR_APP_KEY"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Node.js" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"request"</span><span class="p">);</span>
+<span class="nx">request</span><span class="p">(</span><span class="s2">"http://api.devrel.com/advocates/yitzi/skills?token=YOUR_APP_KEY"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+								
+								
+
+
+<div title="Curl" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://sampleapi.devrel.com/advocates/yitzi/skills?key<span class="o">=</span>YOUR_APP_KEY
+</code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="s2">"learning new technologies"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yitzi picks up new technologies rapidly and quickly finds creative and fun ways to put them to use"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"examples"</span><span class="p">:</span><span class="w"> </span><span class="s2">"As a development lead on projects ranging from education to legal research and more Yitzi has proven himself capable of picking up new technologies on the fly and implementing them with a focus on best practice. In the heat of action Yitzi has learnt Android, Java, PostgreSQL, Elastic, and much more. Yitzi is a tireless tinkerer who wil not put down a new technology until he masters it!"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boiling Hi-tech down to its fundamental ingredients and presenting complex concepts to audiences of all levels at their level"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Years of working directly with clients as well as presenting tech workshops for all ages has helped Yitzi to hone his teaching methods."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"examples"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yitzi runs the popular workshops at TeamUP Israel that teaches tech (RasPi, Android..) to people of all ages."</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advocate has no skillz, RUN AWAY!"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
