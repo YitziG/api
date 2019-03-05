@@ -41,10 +41,10 @@ right_code_blocks:
         "degree": "BSc Computer Science",
         "college": "Jersalem College of Technology",
         "email": "yitzi@startbetshemesh.com",
-        "linkedin": "linkedin.com/in/yitzi",
+        "linkedin": "yitzi.dev/li",
         "employer" : "Sifra",
         "position" : "Developer Advocate",
-        "resume" : "https://www.bit.ly/DEVREL",
+        "resume" : "yitzi.dev/resume",
         "note": "Grab if available!"
       }
     title: Response
