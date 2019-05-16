@@ -1,5 +1,6 @@
 <div id="sidebar" class="sidebar">
-	{% assign sorted_collections = site.collections | sort: "position" %}
+    <a href="https://twitter.com/codegician?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @codegician</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    {% assign sorted_collections = site.collections | sort: "position" %}
 	{% for collection in sorted_collections %}
 		{% if collection.label != "posts" %}
 			<section>
