@@ -7,7 +7,7 @@ parameters:
 content_markdown: |-
   Welcome to our API.
 
-  This API document is designed for those interested in finding an amazing developer advocate.
+  This API document is designed for developer advocate research.
 
   You'll succeed if you do this.
   {: .success }
