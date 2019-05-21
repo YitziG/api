@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+---
+title: API Docs
+---
+{% assign sorted_collections = site.collections | sort: "position" %}
+{% for collection in sorted_collections %}
+	{% assign sorted_docs = collection.docs | sort: "position" %}
+	{% for doc in sorted_docs %}
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+						{{ doc.title }}
+						{% if doc.type %}
+							<span class="endpoint {{ doc.type }}"></span>
+						{% endif %}
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/{{ doc.relative_path }}">Edit</a>
+				</h3>
+				{% if doc.description %}
+					<p class="description">{{ doc.description }}</p>
+				{% endif %}
+=======
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,12 +58,14 @@
 		#countdown { line-height: 1.1em; }
 	</style>
 </head>
+>>>>>>> parent of 315e9fa... Update index.html
 
+<<<<<<< HEAD
 <body>
 <div class="pure-g">
 	<div class="pure-u-1">
 		<h1>Stay tuned</h1>
-		<h2>something new is coming here</h2>
+		<h2>Yitzi's blog is on a short vacation</h2>
 		<div id="countdown">
 			<span class="days">00</span>&nbsp;<span class="timeRefDays">days</span>
 			<span class="hours">00</span>&nbsp;<span class="timeRefHours">hours</span>
@@ -70,6 +95,36 @@
     * INFO: change the "date:"-value to your desired target date-time
     */
 	!function(a){a.fn.countdown=function(b,c){function d(){eventDate=Date.parse(f.date)/1e3,currentDate=Math.floor(a.now()/1e3),eventDate<=currentDate&&(c.call(this),clearInterval(interval)),seconds=eventDate-currentDate,days=Math.floor(seconds/86400),seconds-=60*days*60*24,hours=Math.floor(seconds/3600),seconds-=60*hours*60,minutes=Math.floor(seconds/60),seconds-=60*minutes,1==days?e.find(".timeRefDays").text("day"):e.find(".timeRefDays").text("days"),1==hours?e.find(".timeRefHours").text("hour"):e.find(".timeRefHours").text("hours"),1==minutes?e.find(".timeRefMinutes").text("minute"):e.find(".timeRefMinutes").text("minutes"),1==seconds?e.find(".timeRefSeconds").text("second"):e.find(".timeRefSeconds").text("seconds"),"on"==f.format&&(days=String(days).length>=2?days:"0"+days,hours=String(hours).length>=2?hours:"0"+hours,minutes=String(minutes).length>=2?minutes:"0"+minutes,seconds=String(seconds).length>=2?seconds:"0"+seconds),isNaN(eventDate)?(alert("Invalid date. Example: 30 Tuesday 2013 15:50:00"),clearInterval(interval)):(e.find(".days").text(days),e.find(".hours").text(hours),e.find(".minutes").text(minutes),e.find(".seconds").text(seconds))}var e=a(this),f={date:null,format:null};b&&a.extend(f,b),d(),interval=setInterval(d,1e3)}}(jQuery),$(document).ready(function(){
-		$("#countdown").countdown({date:"23 May 2023 23:23:23",format:"on"})});
+		$("#countdown").countdown({date:"31 May 2019 23:23:23",format:"on"})});
 </script>
 </html>
+=======
+				{% if doc.parameters and doc.parameters[0].name %}
+						<h6>Parameters</h6>
+						<dl>
+								{% for parameter in doc.parameters %}
+										<dt>{{ parameter.name }}</dt>
+										<dd>{{ parameter.content }}</dd>
+								{% endfor %}
+						</dl>
+				{% endif %}
+
+				{{ doc.content_markdown | markdownify | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
+
+				{% if doc.left_code_blocks and doc.left_code_blocks[0].code_block %}
+						{% for block in doc.left_code_blocks %}
+								{% include syntax-highlight.html block=block %}
+								{% endfor %}
+						{% endif %}
+			</section>
+			{% if doc.right_code_blocks and doc.right_code_blocks[0].code_block %}
+					<section class="right-code">
+						{% for block in doc.right_code_blocks %}
+								{% include syntax-highlight.html block=block %}
+						{% endfor %}
+				</section>
+			{% endif %}
+		</section>
+	{% endfor %}
+{% endfor %}
+>>>>>>> parent of cc5c237... Update index.html
