@@ -1,41 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Dummy Page</title>
-	<meta name="description" content="Simple, quick, standalone responsive placeholder Website without any additional resources">
-	<meta name="author" content="https://gist.github.com/oliveratgithub">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-	<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-	<![endif]-->
-	<!--[if lte IE 8]>
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-	<![endif]-->
-	<!--[if gt IE 8]><!-->
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-	<!--<![endif]-->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-	<style>
-		body {
-			line-height: 1.7em;
-			color: #000;
-			background-color: #ddd;
-			font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-			text-shadow: 1px 1px 16px rgba(255, 255, 255, 0.8);
-			font-size: 34px;
-			text-align: center;
-			margin-top: 85px;
-		}
-		h1, h2, h3, h4, h5, h6, label { color: #fff; }
-		h1 { text-transform: uppercase; }
-		#countdown { line-height: 1.1em; }
-	</style>
-</head>
+---
+title: API Docs
+---
+{% assign sorted_collections = site.collections | sort: "position" %}
+{% for collection in sorted_collections %}
+	{% assign sorted_docs = collection.docs | sort: "position" %}
+	{% for doc in sorted_docs %}
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+						{{ doc.title }}
+						{% if doc.type %}
+							<span class="endpoint {{ doc.type }}"></span>
+						{% endif %}
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/{{ doc.relative_path }}">Edit</a>
+				</h3>
+				{% if doc.description %}
+					<p class="description">{{ doc.description }}</p>
+				{% endif %}
 
+<<<<<<< HEAD
 <body>
 <div class="pure-g">
 	<div class="pure-u-1">
@@ -73,3 +58,33 @@
 		$("#countdown").countdown({date:"31 May 2019 23:23:23",format:"on"})});
 </script>
 </html>
+=======
+				{% if doc.parameters and doc.parameters[0].name %}
+						<h6>Parameters</h6>
+						<dl>
+								{% for parameter in doc.parameters %}
+										<dt>{{ parameter.name }}</dt>
+										<dd>{{ parameter.content }}</dd>
+								{% endfor %}
+						</dl>
+				{% endif %}
+
+				{{ doc.content_markdown | markdownify | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
+
+				{% if doc.left_code_blocks and doc.left_code_blocks[0].code_block %}
+						{% for block in doc.left_code_blocks %}
+								{% include syntax-highlight.html block=block %}
+								{% endfor %}
+						{% endif %}
+			</section>
+			{% if doc.right_code_blocks and doc.right_code_blocks[0].code_block %}
+					<section class="right-code">
+						{% for block in doc.right_code_blocks %}
+								{% include syntax-highlight.html block=block %}
+						{% endfor %}
+				</section>
+			{% endif %}
+		</section>
+	{% endfor %}
+{% endfor %}
+>>>>>>> parent of cc5c237... Update index.html
