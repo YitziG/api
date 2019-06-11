@@ -3,8 +3,8 @@
 
 title: Aviator
 description: Jekyll template for API documentation.
-url: "https://yitzig.github.io"
-baseurl: ""
+url: ""
+baseurl: "/api"
 google_analytics_key: UA-136321049-1
 permalink: pretty
 
