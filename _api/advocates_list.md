@@ -46,7 +46,7 @@ right_code_blocks:
         {
           "id": "mary",
           "name": "Mary Thengvall",
-          "description": "Mary Thengvall is a connector of people at heart, both personally and professionally."
+          "description": "Mary Thengvall is a connector of people at heart, both personally and professionally.",
           "available": false
         },
         {
