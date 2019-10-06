@@ -41,16 +41,19 @@ right_code_blocks:
           "id": "jono",
           "name": "Jono Bacon",
           "description": "Jono Bacon is a leading community strategy, management, and execution author, consultant, and speaker.",
+          "available": false
         },
         {
           "id": "mary",
           "name": "Mary Thengvall",
           "description": "Mary Thengvall is a connector of people at heart, both personally and professionally."
+          "available": false
         },
         {
           "id": "yitzi",
           "name": "Yitzi Ginzberg",
           "description": "Yitzi Ginzberg is a developer, teacher, and community organizer, with a passion for spreading knowledge.",
+          "available": true
         }
       ]
     title: Response
