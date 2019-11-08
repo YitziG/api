@@ -41,7 +41,7 @@ right_code_blocks:
           "name": "Community Project Nights",
           "position": "Organizer",
           "description": "Organize and facilitate twice monthly meetups where developers and community managers work to build community and software in Bet Shemesh",
-          "facebook": "https://www.facebook.com/groups/374361659790040"
+          "website": "http://bit.ly/PROJECTGALLERY"
         },
         {
           "name": "Google Developer Challenge Meetup",
