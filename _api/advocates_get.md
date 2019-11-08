@@ -40,10 +40,10 @@ right_code_blocks:
         "user": "yitzi",
         "degree": "BSc Computer Science",
         "college": "Jersalem College of Technology",
-        "email": "yitzi@startbetshemesh.com",
+        "email": "hello@yitzi.dev",
         "linkedin": "yitzi.dev/li",
         "employer" : "Sifra",
-        "position" : "Developer Advocate",
+        "position" : "Lead Backend Developer",
         "resume" : "yitzi.dev/resume",
         "note": "Grab if available!"
       }

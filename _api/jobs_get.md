@@ -49,12 +49,11 @@ right_code_blocks:
           "id": "start",
           "position": "Community Manager",
           "company": "Start Bet Shemesh",
-          "facebook": "facebook.com/startbeitshemesh",
           "dateStarted": "Feb 2018",
           "currentPosition": true
         },
         { "id": "maoftech",
-          "position": "Advisory board member and Start-up mentor",
+          "position": "Advisory board member",
           "company": "MaofTech accelerator",
           "website": "betshemesh.maof-tech.com",
           "dateStarted": "Dec 2018",
