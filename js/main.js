@@ -70,51 +70,6 @@ jQuery(function() {
 	}
 });
 
-console.log(new AudioContext());
-let freq_data = [];
-
-// Create nodes
-const ctx = new AudioContext(); // AudioContext Object
-const oscillator = ctx.createOscillator(); // OscillatorNode
-const analyser = ctx.createAnalyser(); // AnalyserNode
-const gain = ctx.createGain(); // GainNode
-const scriptProcessor = ctx.createScriptProcessor(4096, 1, 1); // ScriptProcessorNode
-
-// Disable volume
-gain.gain.value = 0;
-
-// Connect oscillator output (OscillatorNode) to analyser input
-oscillator.connect(analyser);
-// Connect analyser output (AnalyserNode) to scriptProcessor input
-analyser.connect(scriptProcessor);
-// Connect scriptProcessor output (ScriptProcessorNode) to gain input
-scriptProcessor.connect(gain);
-// Connect gain output (GainNode) to AudioContext destination
-gain.connect(ctx.destination);
-
-scriptProcessor.onaudioprocess = function(bins) {
-	// The number of (frequency) data values
-	bins = new Float32Array(analyser.frequencyBinCount);
-	// Fill the Float32Array array of these based on values
-	analyser.getFloatFrequencyData(bins);
-
-	// Copy frequency data to 'freq_data' array
-	for (var i = 0; i < bins.length; i = i + 1) {
-		freq_data.push(bins[i]);
-	}
-
-	// Disconnect the nodes from each other
-	analyser.disconnect();
-	scriptProcessor.disconnect();
-	gain.disconnect();
-
-	// Log output of frequency data
-	console.log(freq_data);
-};
-
-// Start playing tone
-oscillator.start(0);
-
 function getClosestHeader() {
 	var $links = $('.sidebar a'),
 	top = window.scrollY,
@@ -148,14 +103,3 @@ function getClosestHeader() {
 	}
 	return $last;
 }
-
-
-var f = ['🤔','🤔','🤔', '😗','😗','😗', '😚','😚','😚', '😙','😙','😙', '🌝','🌝','🌝', '😉','😉','😉', '😍','😍','😍', '😳','😳','😳', '😀','😀','😀', '❤', '❤', '❤'];
-
-function loop() {
-	location.hash = f[Math.floor((Date.now()/100)%f.length)];
-
-	setTimeout(loop, 50);
-}
-
-loop();
