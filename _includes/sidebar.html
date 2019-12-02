@@ -1,23 +1,32 @@
 <div id="sidebar" class="sidebar">
-    <a href="https://twitter.com/codegician?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @codegician</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/codegician?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow
+        @codegician</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     {% assign sorted_collections = site.collections | sort: "position" %}
-	{% for collection in sorted_collections %}
-		{% if collection.label != "posts" %}
-			<section>
-				<h6>{{ collection.title }}</h6>
-				<ul>
-					{% assign sorted_docs = collection.docs | sort: "position" %}
-					{% for doc in sorted_docs %}
-						<li>
-							<a href="{% if page.url != '/' %}/{% endif %}#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-								{{ doc.title }}
-								{% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</section>
-		{% endif %}
-	{% endfor %}
-
+    {% for collection in sorted_collections %}
+    {% if collection.label != "posts" %}
+    <section>
+        <h6>{{ collection.title }}</h6>
+        <ul>
+            {% assign sorted_docs = collection.docs | sort: "position" %}
+            {% for doc in sorted_docs %}
+            <li>
+                <a href="{% if page.url != '/' %}/{% endif %}#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                    {{ doc.title }}
+                    {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+    {% endfor %}
+	<div style="text-align: center">
+    <img data-creepyface
+         src="img/serious.jpeg" data-src-hover="img/hover.jpeg"
+         data-src-look-0="img/0.jpeg" data-src-look-45="img/45.jpeg" data-src-look-90="img/90.jpeg"
+         data-src-look-135="img/135.jpeg" data-src-look-180="img/180.jpeg" data-src-look-225="img/225.jpeg"
+         data-src-look-270="img/270.jpeg" data-src-look-315="img/315.jpeg"
+         style="border-radius: 50%; width:100px; height:100px; object-fit: cover; margin-top: 50px; margin-bottom:auto">
+	</div>
 </div>
