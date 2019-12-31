@@ -1,3 +1,29 @@
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="108414104010999"
+     theme_color="#0084ff"
+     logged_in_greeting="Hi! What's up?"
+     logged_out_greeting="Hi! What's up?">
+</div>
 <div class="canva-embed" data-design-id="DADRAGM3anw" data-height-ratio="1.4143"
      style="padding:141.4286% 5px 5px 5px;background:rgba(0,0,0,0.03);border-radius:8px;"></div>
 <script async src="https:&#x2F;&#x2F;sdk.canva.com&#x2F;v1&#x2F;embed.js"></script>
